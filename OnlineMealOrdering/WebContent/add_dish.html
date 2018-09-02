@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Online Meal Ordering System</title>
+
+<!-- Bootstrap core CSS -->
+<link href="pages/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="pages/css/heroic-features.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="../index.html">Online Meal Ordering
+				System</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link"
+						href="manager_menu.html">Home <span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container">
+		<section class="py-5">
+			<div class="container">
+				<h1>Create new Dish</h1>
+			</div>
+		</section>
+
+
+		<!-- Page Features -->
+		<form id="AddDish-form" role="form" action="AddDishService"
+			method="post">
+			<div class="form-group">
+				<label>Dish Name</label> <input type="text" class="form-control"
+					id="dishName" name="dishName" placeholder="Enter Dish Name"
+					required>
+				<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+			</div>
+			<div class="form-group">
+				<label>Dish Price</label> <input type="text" class="form-control"
+					id="dishPrice" name="dishPrice" placeholder="Enter Dish Price"
+					required> <small id="dishPriceHelp"
+					class="form-text text-muted">Ensure enter valid number.</small>
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Description</label>
+				<textarea class="form-control" name="description" id="description" rows="3" placeholder="Enter Dish Description"></textarea>
+			</div>
+
+			<!-- <div class="col-md-6"> -->
+			<!-- <div class="form-group">
+            <label>Upload Image</label>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-default btn-file">
+                        Browse&hellip; <input type="file" id="file" name="file">
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+            <img id='img-upload'/>
+        </div>
+       -->
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+
+		<br />
+		<br />
+
+		<!-- file selector  -->
+		<form id="disnImgUpload" role="form" action="AddDishService"
+			method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<!-- <label>Upload Image</label> -->
+				<!-- <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-default btn-file">
+                        Browse&hellip; <input type="file" id="file" name="file">
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+            <img id='img-upload'/> -->
+				<div>
+					<label>Upload Image：</label> <input type="file" name="file"><br>
+
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+
+		</form>
+
+
+
+	</div>
+	<!-- /.container -->
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">SWEN90007 Software Design
+				and Architecture</p>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="pages/vendor/jquery/jquery.min.js"></script>
+	<script src="pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- <script type="text/javascript">
+      $(document).ready( function() {
+            $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+      
+          $('.btn-file :file').on('fileselect', function(event, label) {
+              
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+              
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+            
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  
+                  reader.onload = function (e) {
+                      $('#img-upload').attr('src', e.target.result);
+                  }
+                  
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+      
+          $("#imgInp").change(function(){
+              readURL(this);
+          }); 	
+        });
+      </script> -->
+
+</body>
+
+</html>
